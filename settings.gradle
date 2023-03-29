@@ -30,3 +30,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "JetPackFirstApplication"
 include ':app'
+include ':rxjavaapp'
