@@ -1,6 +1,9 @@
 package com.jetpack.rxjavaapp;
 
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * @project: JetPackFirstApplication
@@ -9,5 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 
 public class BaseActivity extends AppCompatActivity {
+    protected CompositeDisposable compositeDisposable = new CompositeDisposable();
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        compositeDisposable.clear();
+    }
+
+    public void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
 }

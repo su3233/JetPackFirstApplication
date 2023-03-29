@@ -21,7 +21,6 @@ import com.jetpack.rxjavaapp.BaseActivity;
 import com.jetpack.rxjavaapp.R;
 
 public class UserRoomActivity extends BaseActivity {
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private UserViewModel userViewModel;
     private TextView tvName, tvTime;
     private TimeViewModel timeViewModel;
@@ -53,7 +52,7 @@ public class UserRoomActivity extends BaseActivity {
                     }, new Consumer<Throwable>() {
                         @Override
                         public void accept(Throwable throwable) throws Exception {
-                            Toast.makeText(UserRoomActivity.this, "修改失败", Toast.LENGTH_SHORT).show();
+                            showToast("修改失败");
                         }
                     }));
         });
@@ -85,9 +84,4 @@ public class UserRoomActivity extends BaseActivity {
                 }));
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        compositeDisposable.clear();
-    }
 }
