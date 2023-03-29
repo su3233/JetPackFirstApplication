@@ -8,6 +8,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackFirstApplication">
         <activity
+            android:name=".user_room.UserRoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
