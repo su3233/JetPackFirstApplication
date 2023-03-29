@@ -1,12 +1,7 @@
 package com.jetpack.rxjavaapp.user_room;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-import io.reactivex.CompletableObserver;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -15,9 +10,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.jetpack.rxjavaapp.BaseActivity;
+import com.jetpack.rxjavaapp.base.BaseActivity;
 import com.jetpack.rxjavaapp.R;
 
 public class UserRoomActivity extends BaseActivity {

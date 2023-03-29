@@ -1,4 +1,4 @@
-package com.jetpack.rxjavaapp;
+package com.jetpack.rxjavaapp.base;
 
 import android.widget.Toast;
 
