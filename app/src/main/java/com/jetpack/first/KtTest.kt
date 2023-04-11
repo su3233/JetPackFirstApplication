@@ -1,5 +1,6 @@
 package com.jetpack.first
 
+import com.common.mylibrary.bean.StudentBean
 import kotlinx.coroutines.delay
 
 
@@ -47,8 +48,8 @@ fun main() {
 //    println("sex:$c")
 
 
-//    val studentBean = StudentBean("110101199003076296")
-//    println("studentBean:$studentBean")
+    val studentBean = StudentBean("110101199003076296")
+    println("studentBean:$studentBean")
 
 
     KtTest().sendIntNoResult(112, 221) {

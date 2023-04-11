@@ -58,5 +58,5 @@ dependencies {
     implementation deps.lifecycle.livedata_ktx
 
 
-    implementation project(':mylibrary')
+    implementation project(path:':mylibrary')
 }
