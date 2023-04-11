@@ -57,6 +57,9 @@ dependencies {
     implementation deps.lifecycle.viewmodel_ktx
     implementation deps.lifecycle.livedata_ktx
 
+    implementation deps.lifecycle.runtime
+    implementation deps.activity.activity_ktx
+
 
     implementation project(path:':mylibrary')
 }
