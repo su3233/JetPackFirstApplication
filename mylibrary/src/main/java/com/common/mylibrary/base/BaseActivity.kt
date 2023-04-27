@@ -9,7 +9,7 @@ import com.common.mylibrary.view.FirstToast
  * @author: tongSheng.su on 2023/3/31 16:03
  * @Description：
  */
-open class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity :IAction, AppCompatActivity() {
     fun toastShow(str: String) {
         FirstToast.makeText(this, str, Toast.LENGTH_LONG).show()
     }

@@ -8,3 +8,6 @@
 searchBar+颜色
 文件读写工具
 
+
+liveData和mutableLiveData
+
