@@ -78,6 +78,7 @@ fun main() {
 
 
     val studentBean = StudentBean("110101199003076296")
+    val studentBean2 = StudentBean("110101199003076296","su",2)
     println("studentBean:$studentBean")
 
 

@@ -1,6 +1,9 @@
 package com.common.mylibrary.bean
 
+import android.os.Parcelable
 import com.common.mylibrary.idConvertSex
+import kotlinx.parcelize.Parcelize
+import java.lang.reflect.Array.get
 import java.util.UUID
 
 /**
@@ -8,7 +11,8 @@ import java.util.UUID
  * @author: tongSheng.su on 2023/3/31 11:38
  * @Description：
  */
-data class StudentBean(val id: String, val name: String, val sex: Int) {
+@Parcelize
+data class StudentBean(val id: String, val name: String, var _sex: Int) : Parcelable {
     constructor(
         idNum: String
     ) : this(
@@ -16,6 +20,9 @@ data class StudentBean(val id: String, val name: String, val sex: Int) {
         name = "张三",
         idNum.idConvertSex().ordinal
     )
+
+    val sex
+        get() = "性别：$_sex"
 
 
 }
