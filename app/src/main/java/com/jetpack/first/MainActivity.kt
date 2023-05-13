@@ -31,6 +31,9 @@ class MainActivity : BaseActivity() {
     private val btViewModel by lazy {
         findViewById<Button>(R.id.bt_main_viewmodel)
     }
+    private val btTest by lazy {
+        findViewById<Button>(R.id.bt_main_test)
+    }
 
     override fun createViewModel() {
 
@@ -39,6 +42,10 @@ class MainActivity : BaseActivity() {
 
     override fun click() {
         btViewModel.setOnClickListener { jumpTo(ViewModelActivity::class.java) }
+        btTest.setOnClickListener {
+            startActivity(Intent(this, TestActivity::class.java))
+//            jumpTo(TestActivity::class.java)
+        }
 
     }
 

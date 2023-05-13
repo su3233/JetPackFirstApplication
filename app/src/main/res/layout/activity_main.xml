@@ -26,7 +26,13 @@
             android:text="viewModel activity"
             android:textAllCaps="false"
             android:textSize="20sp" />
-
+        <Button
+            android:id="@+id/bt_main_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test activity"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

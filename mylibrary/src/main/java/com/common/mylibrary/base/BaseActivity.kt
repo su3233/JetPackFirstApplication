@@ -17,6 +17,8 @@ abstract class BaseActivity : IAction, AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(getLayout())
         initView()
+        click()
+
     }
 
     override fun onResume() {
