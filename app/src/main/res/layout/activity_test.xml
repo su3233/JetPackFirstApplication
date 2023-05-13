@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TestActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -27,7 +27,18 @@
             android:textAllCaps="false"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/bt_main_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/bt_main_minus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="minus"
+            android:textSize="20sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

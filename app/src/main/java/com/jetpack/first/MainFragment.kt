@@ -1,24 +1,29 @@
-package com.jetpack.first.main
+package com.jetpack.first
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
-import com.jetpack.first.R
-
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.lifecycle.viewModelScope
+import androidx.viewbinding.ViewBindings
+import com.jetpack.first.R.layout
+import com.jetpack.first.databinding.FragmentMainBinding
+import com.jetpack.first.viewmodel.LoginParaViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /**
  * A simple [Fragment] subclass.
  * Use the [MainFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+const val ARG_PARAM1 = "ARG_PARAM1"
+const val ARG_PARAM2 = "ARG_PARAM2"
+
 class MainFragment : Fragment() {
+    private lateinit var binding: FragmentMainBinding
     private var param1: String? = null
     private var param2: String? = null
     private val loginParaViewModel by activityViewModels<LoginParaViewModel>()
@@ -35,13 +40,19 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        container?.let {
+            binding = FragmentMainBinding.inflate(inflater)
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        loginParaViewModel.viewModelScope.launch {
+            delay(500)
+            binding.tvMainFragmentShow.text = "activity中使用viewModel的协程"
+        }
     }
 
     companion object {

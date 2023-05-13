@@ -11,10 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.jetpack.rxjavaapp.base.BaseActivity;
+import com.jetpack.rxjavaapp.base.BaseRxActivity;
 import com.jetpack.rxjavaapp.R;
 
-public class UserRoomActivity extends BaseActivity {
+public class UserRoomRxActivity extends BaseRxActivity {
     private UserViewModel userViewModel;
     private TextView tvName, tvTime;
     private TimeViewModel timeViewModel;

@@ -8,7 +8,6 @@ import com.common.mylibrary.bean.StudentBean
  * @create 11:53 2023/3/31
  * @Describe
  */
-// TODO: 序列化
 
 fun main() {
     println("sexTest:${"411122199002038371".idConvertSex()}")

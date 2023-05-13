@@ -11,7 +11,7 @@ import io.reactivex.disposables.CompositeDisposable;
  * @Description：
  */
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseRxActivity extends AppCompatActivity {
     protected CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Override

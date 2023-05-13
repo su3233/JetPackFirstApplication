@@ -2,6 +2,7 @@ package com.jetpack.first
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.common.mylibrary.bean.SexEnum.MALE
 import com.common.mylibrary.bean.StudentBean
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -38,7 +39,12 @@ class KtTest {
     /**
      * suspend函数做回调
      */
-    suspend fun getLoginResult(name: String, psw: String,dispatcher:CoroutineDispatcher, loginResult: suspend (Boolean) -> Unit) {
+    suspend fun getLoginResult(
+        name: String,
+        psw: String,
+        dispatcher: CoroutineDispatcher,
+        loginResult: suspend (Boolean) -> Unit
+    ) {
         if (name.isNotEmpty() && psw.isNotEmpty()) {
             /**
              * Result 协程内部使用withContext切换上下文
@@ -56,13 +62,13 @@ class KtTest {
             println("Dispatchers.IO...result:$result2")
 
             delay(DELAY_TIME_NET)
-            withContext(dispatcher){
+            withContext(dispatcher) {
                 loginResult.invoke(true)
 
             }
         } else {
             delay(DELAY_TIME_NET)
-            withContext(dispatcher){
+            withContext(dispatcher) {
                 loginResult.invoke(false)
 
             }
@@ -77,14 +83,13 @@ fun main() {
 //    println("sex:$c")
 
 
-
     val studentBean = StudentBean("110101199003076296")
-    val studentBean2 = StudentBean("110101199003076296","su",2)
+    val studentBean2 = StudentBean("110101199003076296", "su", 2, MALE)
     println("studentBean:$studentBean")
 
-//    val stu=studentBean.let{
-//        it.
-//    }
+    val stu = studentBean.let {
+        it._sex = 2
+    }
 
 
     KtTest().sendIntNoResult(112, 221) {

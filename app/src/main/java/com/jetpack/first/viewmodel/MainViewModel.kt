@@ -1,4 +1,4 @@
-package com.jetpack.first.main
+package com.jetpack.first.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

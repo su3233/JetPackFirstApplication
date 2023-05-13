@@ -8,10 +8,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetPackFirstApplication">
         <activity
-            android:name=".user_room.UserRoomActivity"
+            android:name=".user_room.UserRoomRxActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainRxActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

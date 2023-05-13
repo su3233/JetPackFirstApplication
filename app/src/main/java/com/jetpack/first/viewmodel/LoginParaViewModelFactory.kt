@@ -1,4 +1,4 @@
-package com.jetpack.first.main
+package com.jetpack.first.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

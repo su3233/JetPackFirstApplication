@@ -1,6 +1,7 @@
-package com.jetpack.first.main
+package com.jetpack.first.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.jetpack.first.viewmodel.Repository
 
 /**
  * @project: JetPackFirstApplication

@@ -1,11 +1,10 @@
 package com.jetpack.rxjavaapp.user_room;
 
+import androidx.lifecycle.ViewModel;
+
 import java.util.concurrent.TimeUnit;
 
-import androidx.lifecycle.ViewModel;
 import io.reactivex.Flowable;
-import io.reactivex.FlowableEmitter;
-import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.functions.Function;
 
 /**

@@ -6,9 +6,14 @@ package com.common.mylibrary.base
  * @Description：
  */
 interface IAction {
+
+    fun initView()
+
     fun createViewModel()
 
-    fun jump()
+    fun jumpTo(clazz: Class<*>)
 
     fun click()
+
+    fun observeData()
 }
