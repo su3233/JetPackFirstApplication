@@ -7,8 +7,11 @@ import com.common.mylibrary.bean.StudentBean
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.coroutineContext
 
 
@@ -102,4 +105,44 @@ fun main() {
     }
 
 
+    /**
+     * 方法的回调，调用。lambda表达式与::的使用，协程的使用
+     */
+    getName {
+
+    }
+    getSex(3, ::calculateSex)
+    GlobalScope.launch {
+        getResult("account", this.coroutineContext) {
+
+        }
+    }
+}
+fun calculateSex(sex: String) {
+    println(sex)
+}
+
+/**
+ * 方法回调
+ *
+ * @param callback
+ * @receiver
+ */
+fun getName(callback: () -> Unit) {
+    callback.invoke()
+}
+
+fun getSex(id: Int, callback: (String) -> Unit) {
+    callback.invoke(id.toString())
+}
+
+suspend fun getResult(
+    account: String,
+    scope: CoroutineContext,
+    function: suspend (String) -> Unit
+) {
+//        withContext(scope) {
+    withContext(Dispatchers.Main) {
+        function.invoke(account)
+    }
 }
