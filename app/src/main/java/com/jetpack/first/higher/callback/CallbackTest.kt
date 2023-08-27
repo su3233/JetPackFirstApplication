@@ -1,5 +1,7 @@
 package com.jetpack.first.higher.callback
 
+import kotlin.random.Random
+
 
 /**
  * @project: JetPackFirstApplication
@@ -9,13 +11,26 @@ package com.jetpack.first.higher.callback
 
 
 fun main() {
-//AnimalBean
+    getData(fun OnCallbackImpl<String>.() {
+        onSuccessBack {
+            println("success:$it")
+
+        }
+        onErrorBack {
+            println("error:$it")
+
+        }
+    })
+
 }
 
 fun getData(callback: OnCallbackImpl<String>.() -> Unit) {
-    val back=OnCallbackImpl<String>()
+    val back = OnCallbackImpl<String>()
     back.callback()
-
-//    back.onSuccess()
+    if (Random.nextBoolean()) {
+        back.onSuccess("success!!")
+    } else {
+        back.onError("error!!")
+    }
 
 }
