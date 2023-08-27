@@ -32,7 +32,7 @@ abstract class BaseActivity : IAction, AppCompatActivity() {
 
     abstract fun getLayout(): Int
 
-    fun toastShow(str: String) {
+    fun showToast(str: String) {
         FirstToast.makeText(this, str, Toast.LENGTH_LONG).show()
     }
 }

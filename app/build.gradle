@@ -45,15 +45,15 @@ dependencies {
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation deps.core_ktx
-    implementation deps.app_compat
-    implementation deps.material
-    implementation deps.constraint_layout
+//    implementation deps.core_ktx
+//    implementation deps.app_compat
+//    implementation deps.material
+//    implementation deps.constraint_layout
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
-    testImplementation deps.junit
-    androidTestImplementation deps.atsl.ext_junit
-    androidTestImplementation deps.espresso.core
+//    testImplementation deps.junit
+//    androidTestImplementation deps.atsl.ext_junit
+//    androidTestImplementation deps.espresso.core
 
 //    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'//lifecycleScope
 //    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'//viewModelScope
@@ -69,5 +69,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0'
 
 
-    implementation project(path:':mylibrary')
+    api project(path:':mylibrary')
+//    implementation 'androidx.appcompat:appcompat:1.6.1'
+//    implementation 'com.google.android.material:material:1.8.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }

@@ -34,6 +34,14 @@
             android:textAllCaps="false"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/bt_main_register_activity_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="register_activity_result"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

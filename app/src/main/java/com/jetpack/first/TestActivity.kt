@@ -1,7 +1,5 @@
 package com.jetpack.first
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
@@ -74,7 +72,7 @@ class TestActivity : BaseActivity() {
 //            lifecycleScope.launch(Dispatchers.Main) {
             KtTest().getLoginResult("zhangsan", "123", Dispatchers.Main) {
                 val result = if (it) "登录成功" else "登录失败"
-                toastShow(result)
+                showToast(result)
             }
 //            }
         }

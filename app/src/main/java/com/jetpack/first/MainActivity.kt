@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModelProvider
 import com.common.mylibrary.base.BaseActivity
 import com.jetpack.first.R.id
+import com.jetpack.first.registeractivity.RegisterResultActivity
 import com.jetpack.first.viewmodel.LoginParaViewModel
 import com.jetpack.first.viewmodel.LoginParaViewModelFactory
 import com.jetpack.first.viewmodel.LoginViewModel
@@ -34,6 +35,9 @@ class MainActivity : BaseActivity() {
     private val btTest by lazy {
         findViewById<Button>(R.id.bt_main_test)
     }
+    private val btRegisterResult by lazy {
+        findViewById<Button>(R.id.bt_main_register_activity_result)
+    }
 
     override fun createViewModel() {
 
@@ -45,6 +49,9 @@ class MainActivity : BaseActivity() {
         btTest.setOnClickListener {
             startActivity(Intent(this, TestActivity::class.java))
 //            jumpTo(TestActivity::class.java)
+        }
+        btRegisterResult.setOnClickListener {
+            startActivity(Intent(this,RegisterResultActivity::class.java))
         }
 
     }
